@@ -19,14 +19,11 @@ external_stylesheets = [
 ]
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
-app.title = "Restaurant Analytics: Understand Restaurant Frequency!"
 server = app.server
+app.title = "Restaurant Analytics: Understand Restaurant Frequency!"
 app._favicon = "favicon.ico"
 
 df = pd.read_csv('restaurants_zomato.csv', encoding="ISO-8859-1")
-
-navbar = dbc.Nav()
-
 
 # country iso with counts
 col_label = "country_code"
